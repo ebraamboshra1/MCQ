@@ -79,6 +79,9 @@ class Exam with ChangeNotifier {
   }
 
   List<QuestionModel> get questions {
+    for(int i = 0;i< _questions.length;i++){
+      _questions[i].answers.shuffle();
+    }
     return shuffle();
   }
 
